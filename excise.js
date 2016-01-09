@@ -61,5 +61,16 @@ function isEqual (firstWord, secondWord){
 
 console.log(isEqual("sun", "sunday"));
 
+/**Write a function that takes two variables of type Boolean called first and secondrespectively. 
+Return true if both values are true otherwise return false.**/
+function doubleEquals (first, second){
+	if(first === second){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+console.log(doubleEquals(true, true));
 
 
