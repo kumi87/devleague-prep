@@ -38,7 +38,7 @@ return false;
 	}
 }
 
-console.log(isTrue(7));
+console.log(isTrue(8)); //changed 7 to 8
 
 
 
