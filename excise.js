@@ -73,4 +73,15 @@ function doubleEquals (first, second){
 
 console.log(doubleEquals(true, true));
 
+/**Write a function that takes three variables of type Number called first and second and third respectively. 
+Return true if the sum of all values are greater than 30 otherwise return false.**/
+function totalOver30 (first, second, third){
+	if (first + second + third >= 30){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+console.log(totalOver30(10,10,10));
 
