@@ -50,6 +50,16 @@ function isFalse (val){
 }
 console.log(isFalse('coke'));
 
+/**Write a function that takes two variables of type String called firstWord and secondWordrespectively. 
+Return 'AWWWWRIGHT' if the two are equal otherwise return 'Y U NO MATCH!'.**/
+function isEqual (firstWord, secondWord){
+	if(firstWord === secondWord){
+		return "'AWWWWRIGHT'";
+	}else{ 
+		return "Y U MATCH!"; }
+}
+
+console.log(isEqual("sun", "sunday"));
 
 
 
