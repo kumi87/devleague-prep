@@ -85,3 +85,14 @@ function totalOver30 (first, second, third){
 
 console.log(totalOver30(10,10,10));
 
+/**Write a function that takes four variables of type Number called first and second and third and fourth respectively. Return true if the sum of first, second and third are less than fourth otherwise return **/
+function totalUnderWhat (first, second, third, fourth){
+	if((first + second + third) <= fourth){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+console.log(totalUnderWhat(1,2,3,1));
+
