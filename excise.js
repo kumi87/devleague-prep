@@ -40,5 +40,16 @@ return false;
 
 console.log(isTrue(8)); //changed 7 to 8
 
+/**Write a function that takes in a Boolean value named val and have the function return whether the value is false.**/
+function isFalse (val){
+	if(val === 'water'){
+		return false;
+	}else{
+		return true;
+	}
+}
+console.log(isFalse('coke'));
+
+
 
 
