@@ -95,4 +95,5 @@ function totalUnderWhat (first, second, third, fourth){
 }
 
 console.log(totalUnderWhat(1,2,3,1));
+//
 
