@@ -20,18 +20,18 @@ This new function should accept two parameters.**/
 
 var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"];
 
-	for(i=0; i<presidents.length; i++){
-		console.log("Value of i is:" + i);
+for (i = 0; i < presidents.length; i++) {
+    console.log("Value of i is:" + i);
 
-		console.log("Value at Index is:" + presidents[i]);
+    console.log("Value at Index is:" + presidents[i]);
+}
+
+function printContent(nameList) {
+    for (i = 0; i < nameList.length; i++) {
+        console.log("Value of i is:" + i);
+
+        console.log("Value at Index is:" + nameList[i]);
     }
-
-function printContent (nameList){
-	for (i = 0; i < nameList.length; i++){
-		console.log("Value of i is:" + i);
-
-		console.log("Value at Index is:" + nameList[i]);
-	}
 }
 
 printContent(presidents);
@@ -54,11 +54,11 @@ still achieve the same result?**/
 
 var stringOfNumbers = "";
 
-for(i = 10; i < 20; i++){
+for (i = 10; i < 20; i++) {
 
-	stringOfNumbers += i; //<--- prepending i to string. you can;t just put i in the string. it doesn't matter. 
-	
-	console.log(stringOfNumbers);
+    stringOfNumbers += i; //<--- prepending i to string. you can;t just put i in the string. it doesn't matter. 
+
+    console.log(stringOfNumbers);
 }
 
 
@@ -75,9 +75,9 @@ for(i = 10; i < 20; i++){
 var evenNumberArray = [];
 
 for (var i = 1; i < 99; i++) {
-	if (i % 2 === 0) {
-		evenNumberArray.push(i);
-	}
+    if (i % 2 === 0) {
+        evenNumberArray.push(i);
+    }
 }
 
 console.log(evenNumberArray);
@@ -95,16 +95,16 @@ Example result should look like:
 
 `[ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]` **/
 
-var oopsArray = [ 'turn' , , 'down' , , 'for' , , 'what'];
+var oopsArray = ['turn', , 'down', , 'for', , 'what'];
 
 
- for (var i = 0; i < oopsArray.length; i++){
- 	
- 	if(!oopsArray[i]){
- 		oopsArray[i] = 'noop';
- 	}
- }
-console.log( oopsArray.length, oopsArray);
+for (var i = 0; i < oopsArray.length; i++) {
+
+    if (!oopsArray[i]) {
+        oopsArray[i] = 'noop';
+    }
+}
+console.log(oopsArray.length, oopsArray);
 
 
 
@@ -124,8 +124,8 @@ down
 nope
 turn*/
 
-for (var i = oopsArray.length -1; i >= 0; i--){
-console.log(oopsArray[i]);
+for (var i = oopsArray.length - 1; i >= 0; i--) {
+    console.log(oopsArray[i]);
 }
 
 
@@ -150,20 +150,20 @@ napSchedule into the nap function.
 var isNapTime = false;
 var napSchedule = [false, false, true, false, true, true];
 
-function nap (schedule){
-	
-		if (schedule === true){
-			console.log("ZzZzZzZz");
-		}else{
-			console.log("Gotta get to work!");
-			isNapTime = true;  //is it ok to use variables that are not part of or created in the function or passed to the function 
-		}	
+function nap(schedule) {
+
+    if (schedule === true) {
+        console.log("ZzZzZzZz");
+    } else {
+        console.log("Gotta get to work!");
+        isNapTime = !isNapTime; //is it ok to use variables that are not part of or created in the function or passed to the function 
+    }
 
 }
 
-for(i = 0; i < napSchedule.length; i++){
-  nap(napSchedule[i]);
-  console.log(isNapTime);
+for (i = 0; i < napSchedule.length; i++) {
+    nap(napSchedule[i]);
+    console.log(isNapTime);
 }
 
 //OR
@@ -171,21 +171,21 @@ for(i = 0; i < napSchedule.length; i++){
 var isNapTime = false;
 var napSchedule = [false, false, true, false, true, true];
 
-function nap (schedule){
-	
-		if (schedule === true){
-			console.log("ZzZzZzZz");
-            return false; // if i dont use this, it makes undefind
-		}else{
-			console.log("Gotta get to work!");
-			return true;
-		}	
+function nap(schedule) {
+
+    if (schedule === true) {
+        console.log("ZzZzZzZz");
+        return false; // if i dont use this, it makes undefind
+    } else {
+        console.log("Gotta get to work!");
+        return true;
+    }
 
 }
 
-for(i = 0; i < napSchedule.length; i++){
-  isNapTime = nap(napSchedule[i]);
-  console.log(isNapTime);
+for (i = 0; i < napSchedule.length; i++) {
+    isNapTime = nap(napSchedule[i]);
+    console.log(isNapTime);
 }
 
 
@@ -210,11 +210,11 @@ copyOfValuesArray to make sure they have the same values (which means your funct
 var copyOfValuesArray = [];
 var valuesArray = [99, 66, 829, 1941, 8, 76];
 
-function copyArray (originArray , destinationArray){
-	for(i = 0; i < originArray.length; i++){
-		destinationArray.push(originArray[i]);
-	}
-console.log(originArray, destinationArray);
+function copyArray(originArray, destinationArray) {
+    for (i = 0; i < originArray.length; i++) {
+        destinationArray.push(originArray[i]);
+    }
+    console.log(originArray, destinationArray);
 }
 
 copyArray(valuesArray, copyOfValuesArray);
@@ -232,27 +232,22 @@ Declare a function named generateArrayOfStrings which takes a single argument st
 This function returns a new Array with only String values inside of it.
 **/
 
-var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
+var miscStorage = [[], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush'];
 
-function generateArrayOfStrings (storage){
-	var newArray = [];
-	for (i= 0; i < storage.length; i++){
-		if (storage[i] === ''){  //how to pick only strings??? while???
-			newArray.push(storage[i]);
-		}
-	}
+function generateArrayOfStrings(storage) {
+    var newArray = [];
+    var str = typeof ''; 
+
+    for (var i = 0; i < storage.length; i++) {
+        if (typeof storage[i] === typeof str) { //how to pick only strings??? while???
+            newArray.push(storage[i]);
+        }
+    }
+	return newArray;
 }
 
-generateArrayOfStrings(miscStorage);
-console.log(newArray);
 
-
-
-
-
-
-
-
+console.log(generateArrayOfStrings(miscStorage));
 
 
 
@@ -273,3 +268,16 @@ If the enrolled property is set to true then change that student's graduated pro
 Otherwise, if enrolled is set to false then change enrolled to 
 true leaving graduated alone and unchanged.
 **/
+
+//var currentClass = [];
+
+//function graduateAndSetNewClass(class) {
+
+//}
+
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+
+function callThePosse (car, names, ages){
+    
+}
